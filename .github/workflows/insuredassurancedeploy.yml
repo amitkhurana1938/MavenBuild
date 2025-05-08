@@ -53,8 +53,8 @@ jobs:
     - name: Jenkins-Action
       uses: joshlk/jenkins-githubaction@V0.0.1
       with:
-        url: http://localhost:8080/
+        url: ${{ secrets.JENKINS_HOST }}
         job_name: InsuredJenkinsJob
-        username: admin
-        api_token: 11ca794be48693b66be48acb6fc6e4126d
+        username: ${{ secrets.JENKINS_USER }}
+        api_token: ${{ secrets.JENKINS_TOKEN }}
         timeout: 600
